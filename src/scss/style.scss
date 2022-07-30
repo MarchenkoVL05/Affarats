@@ -1,0 +1,530 @@
+@import './normalize.scss';
+@import './base/variables';
+@import './base/mixins';
+
+// Basic styles
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Geometria';
+  font-weight: normal;
+}
+
+section:not(:first-child) {
+  margin-top: 100px;
+}
+
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
+.title {
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 45px;
+  text-transform: uppercase;
+  color: $green;
+}
+
+.title--blue {
+  color: $blue;
+}
+
+.text {
+  font-size: 24px;
+  color: $text;
+}
+
+.button {
+  padding: 11px 14px 13px;
+  font-size: 20px;
+  color: #fff;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+}
+
+// Section Hero
+
+.hero {
+  background-image: url('../../dist/images/heroImg.jpg');
+  @include backgroundImageMixin;
+  padding: 125px 0 172px 0;
+
+  h1 {
+    max-width: 520px;
+    margin-top: 35px;
+    font-size: 48px;
+    position: relative;
+  }
+
+  p {
+    max-width: 403px;
+    margin-top: 65px;
+    line-height: 110%;
+  }
+
+  button {
+    width: 275px;
+    height: 51px;
+    margin-top: 21px;
+    background: linear-gradient(34.66deg, #bc1822 16.88%, #e53322 76%);
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+  }
+
+  .circle {
+    background: linear-gradient(147.64deg, #ffffff 13.56%, #f1f1f1 85.54%);
+    width: 664px;
+    height: 664px;
+    border-radius: 100%;
+    padding: 105px 0 78px 145px;
+    position: relative;
+    left: -145px;
+
+    &::before {
+      content: '';
+      width: 268px;
+      height: 268px;
+      background: $green-gradient;
+      position: absolute;
+      border-radius: 100%;
+      top: -48px;
+      right: -110px;
+    }
+
+    &::after {
+      content: '';
+      width: 105px;
+      height: 105px;
+      background: $blue-gradient;
+      position: absolute;
+      border-radius: 100%;
+      right: -210px;
+      top: 220px;
+    }
+  }
+}
+
+// Section Attraction
+
+.attraction {
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .title--blue {
+    color: $blue;
+  }
+
+  h3 {
+    max-width: 387px;
+    line-height: 45px;
+  }
+
+  p {
+    margin-top: 45px;
+    max-width: 420px;
+    line-height: 120%;
+  }
+
+  img {
+    max-height: 400px;
+  }
+}
+
+// Section Features
+
+.features {
+  .cards {
+    margin-top: 50px;
+    @include cardsMixin;
+  }
+
+  .card {
+    @include cardMixin;
+  }
+
+  p {
+    @include cardTextMixin;
+  }
+
+  .cardShadow {
+    @include cardShadowMixin;
+  }
+}
+
+.flats {
+  .carousel {
+    margin-top: 60px;
+
+    &-item {
+      margin-right: 50px;
+      width: 1140px;
+      min-height: 550px;
+      background: #ffffff;
+      border: 1px solid #c5c5c5;
+      box-shadow: 8px 8px 25px rgba(0, 0, 0, 0.25);
+      border-radius: 20px;
+      display: flex;
+      position: relative;
+      left: 20px;
+    }
+
+    .item-image {
+      width: 360px;
+      height: 560px;
+      position: relative;
+    }
+
+    .item-content {
+      padding: 70px 52px 0 0;
+      display: flex;
+      flex-direction: column;
+
+      .plan p {
+        text-align: center;
+        font-style: italic;
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 23px;
+        color: #000000;
+      }
+
+      .plan-description {
+        margin-left: 40px;
+
+        h6 {
+          font-size: 24px;
+          color: $text;
+        }
+
+        p {
+          max-width: 310px;
+          margin-top: 45px;
+          font-size: 17px;
+          line-height: 135%;
+          color: #000000;
+        }
+
+        button {
+          margin-top: 23px;
+          padding: 11px 22px;
+          background: $green-gradient;
+        }
+      }
+    }
+  }
+
+  .plan-wrapper {
+    display: flex;
+    position: relative;
+  }
+
+  .content-wrapper {
+    .flat-description {
+      margin: 40px 65px 70px 45px;
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 590px;
+        height: 1px;
+        background-color: #000000;
+        top: -20px;
+      }
+
+      .name {
+        color: $text;
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 135%;
+      }
+
+      .number {
+        color: $text;
+        font-weight: 800;
+        font-size: 22px;
+        line-height: 28px;
+      }
+    }
+  }
+}
+
+// Slick Slder
+
+.slick-dots {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+
+  button {
+    font-size: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    border: none;
+    color: #9c9c9c;
+    margin-right: 18px;
+    cursor: pointer;
+  }
+
+  .slick-active {
+    button {
+      background-color: $blue;
+    }
+  }
+}
+
+.slick-list {
+  height: 600px;
+}
+
+// Section Catalog
+
+.catalog {
+  .cards {
+    @include cardsMixin;
+  }
+
+  .card {
+    @include cardMixin;
+
+    img {
+      border-radius: 10px;
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  p {
+    @include cardTextMixin;
+  }
+
+  .cardShadow {
+    @include cardShadowMixin;
+  }
+
+  .catalog-into {
+    position: relative;
+  }
+
+  .catalog-into img {
+    max-width: 1110px;
+  }
+
+  h3 {
+    max-width: 245px;
+    color: #646865;
+    position: absolute;
+    top: 99px;
+    right: 90px;
+  }
+
+  button {
+    background: $green-gradient;
+    position: absolute;
+    right: 90px;
+    bottom: 45px;
+  }
+}
+
+// Section Details
+
+.details {
+  h2 {
+    font-size: 48px;
+    text-align: center;
+    color: $blue;
+    max-width: 644px;
+    margin: 0 auto;
+    line-height: 60px;
+  }
+
+  .cards {
+    @include cardsMixin;
+    margin-top: 44px;
+    gap: 28px;
+  }
+
+  .card {
+    @include cardMixin;
+  }
+
+  p {
+    @include cardTextMixin;
+  }
+
+  .cardShadow {
+    @include cardShadowMixin;
+  }
+
+  button {
+    font-weight: 800;
+    font-size: 24px;
+    text-align: center;
+    color: #c5c5c5;
+    margin: 40px auto 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: block;
+    transition: 0.3s all;
+
+    &:hover {
+      color: #989898;
+    }
+  }
+}
+
+// Section Discounts
+
+.discounts {
+  margin: 100px auto 0;
+  min-height: 470px;
+  padding: 62px 0 69px 0;
+  background-image: url('../../dist/images/discounts-bg.jpg');
+  @include backgroundImageMixin;
+
+  h3 {
+    color: $blue;
+    max-width: 250px;
+  }
+
+  p {
+    margin-top: 34px;
+    max-width: 442px;
+  }
+
+  .button {
+    background: $green-gradient;
+    margin-top: 46px;
+  }
+}
+
+// Section Form
+
+.form {
+  background-image: url('../../dist/images/form-bg.jpg');
+  @include backgroundImageMixin;
+  min-height: 388px;
+  padding: 87px 0 77px 0;
+
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  h3 {
+    max-width: 400px;
+  }
+
+  p {
+    color: #fff;
+    max-width: 400px;
+    line-height: 110%;
+    margin-top: 32px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  input {
+    width: 562px;
+    height: 62px;
+    background: #ffffff;
+    border: 1px solid #c4c4c4;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 50px;
+    margin-top: 11px;
+    padding: 18px 29px;
+    font-size: 26px;
+    color: $text;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      color: #c4c4c4;
+    }
+  }
+
+  button {
+    width: 275px;
+    background: $green-gradient;
+    margin-top: 23px;
+    align-self: flex-end;
+  }
+}
+
+// Footer
+
+footer {
+  background-color: $blue;
+  min-height: 305px;
+  padding: 58px 0 52px 0;
+
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .social {
+    width: 184px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .telephone {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 27px;
+    color: #ffffff;
+    margin-top: 22px;
+  }
+
+  .polite {
+    margin-top: 38px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+  }
+
+  p {
+    font-size: 12px;
+    line-height: 0px;
+    text-align: center;
+    color: #ffffff;
+    max-width: 850px;
+    margin-top: 35px;
+
+    &:nth-child(even) {
+      margin-top: 20px;
+    }
+  }
+
+  img {
+    max-width: 230px;
+    max-height: 70px;
+  }
+}
