@@ -218,6 +218,7 @@ section:not(:first-child) {
           margin-top: 23px;
           padding: 11px 22px;
           background: $green-gradient;
+          box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
         }
       }
     }
@@ -335,6 +336,7 @@ section:not(:first-child) {
     position: absolute;
     right: 90px;
     bottom: 45px;
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
   }
 }
 
@@ -407,6 +409,7 @@ section:not(:first-child) {
 
   .button {
     background: $green-gradient;
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
     margin-top: 46px;
   }
 }
@@ -435,38 +438,7 @@ section:not(:first-child) {
     margin-top: 32px;
   }
 
-  form {
-    display: flex;
-    flex-direction: column;
-  }
-
-  input {
-    width: 562px;
-    height: 62px;
-    background: #ffffff;
-    border: 1px solid #c4c4c4;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 50px;
-    margin-top: 11px;
-    padding: 18px 29px;
-    font-size: 26px;
-    color: $text;
-
-    &:focus {
-      outline: none;
-    }
-
-    &::placeholder {
-      color: #c4c4c4;
-    }
-  }
-
-  button {
-    width: 275px;
-    background: $green-gradient;
-    margin-top: 23px;
-    align-self: flex-end;
-  }
+  @include formInputMixin;
 }
 
 // Footer
@@ -523,8 +495,78 @@ footer {
     }
   }
 
-  img {
-    max-width: 230px;
+  img,
+  a {
     max-height: 70px;
+  }
+}
+
+// Modal Popup
+
+.overlay {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  z-index: 3;
+  top: 0%;
+}
+
+.modal {
+  display: none;
+  max-width: 716px;
+  min-height: 486px;
+  padding: 81px 77px 58px;
+  margin: 0 auto;
+  border-radius: 20px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  background-color: #ffffff;
+  @include formInputMixin;
+
+  h3 {
+    text-align: center;
+  }
+
+  input:nth-child(1) {
+    margin-top: 40px;
+  }
+
+  button {
+    background: linear-gradient(34.66deg, #2da3dc 16.88%, #30d3dd 76%);
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .radio {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #c4c4c4;
+  }
+
+  .agreement {
+    display: flex;
+    justify-content: space-between;
+    max-width: 530px;
+    margin-top: 25px;
+    position: relative;
+    left: 15px;
+
+    input {
+      margin-top: 0;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: #30a3dd;
+  }
+
+  p {
+    font-size: 19px;
+    color: $text;
   }
 }

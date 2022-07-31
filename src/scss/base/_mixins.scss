@@ -40,3 +40,38 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+
+@mixin formInputMixin {
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  input {
+    width: 562px;
+    height: 62px;
+    background: #ffffff;
+    border: 1px solid #c4c4c4;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 50px;
+    margin-top: 11px;
+    padding: 18px 29px;
+    font-size: 26px;
+    color: $text;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      color: #c4c4c4;
+    }
+  }
+
+  button {
+    width: 275px;
+    background: $green-gradient;
+    margin-top: 23px;
+    align-self: flex-end;
+  }
+}

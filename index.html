@@ -379,10 +379,24 @@
           <h3 class="title">Скидки 
             для своих</h3>
             <p class="text">Мы с вами давно знаем друг друга. А для друзей у нас всегда найдётся скидка! Для всех жителей Яркого, переезжающих в новые кварталы — скидка на квартиры 3%!</p>
-            <button class="button">Оставить заявку</button>
+            <button class="button" id="request">Оставить заявку</button>
         </div>
       </section>
 
+      <div class="overlay"></div>
+      <div class="modal">
+        <h3 class="title title--blue">Оставить заявку</h3>
+        <form action="" method="post">
+          <input type="text" placeholder="Имя">
+          <input type="text" placeholder="Телефон">
+          <div class="agreement">
+            <input class="radio" type="checkbox">
+            <p>Я согласен(-на) на <a href="#">обработку персональных данных</a></p>
+          </div>
+          <button class="button">Отправить</button>
+        </form>
+      </div>
+    
       <section class="attraction">
         <div class="container">
           <div class="wrapper">
