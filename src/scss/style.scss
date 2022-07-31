@@ -48,6 +48,7 @@ section:not(:first-child) {
   border-radius: 50px;
   border: none;
   cursor: pointer;
+  transition: 0.3s all;
 }
 
 // Section Hero
@@ -77,6 +78,10 @@ section:not(:first-child) {
     background: linear-gradient(34.66deg, #bc1822 16.88%, #e53322 76%);
     box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
     border-radius: 50px;
+
+    &:hover {
+      background: linear-gradient(34.66deg, #e53322 16.88%, #bc1822 76%);
+    }
   }
 
   .circle {
@@ -158,6 +163,11 @@ section:not(:first-child) {
 
   .cardShadow {
     @include cardShadowMixin;
+  }
+
+  .descr {
+    @include descrMixin;
+    cursor: default;
   }
 }
 
@@ -307,6 +317,11 @@ section:not(:first-child) {
     }
   }
 
+  .descr {
+    @include descrMixin;
+    cursor: default;
+  }
+
   p {
     @include cardTextMixin;
   }
@@ -360,6 +375,11 @@ section:not(:first-child) {
 
   .card {
     @include cardMixin;
+  }
+
+  .descr {
+    @include descrMixin;
+    cursor: default;
   }
 
   p {

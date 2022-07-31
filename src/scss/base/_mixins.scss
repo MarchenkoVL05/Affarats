@@ -7,11 +7,10 @@
 
 @mixin cardMixin {
   position: relative;
-  cursor: pointer;
 }
 
 @mixin cardTextMixin {
-  max-width: 280px;
+  max-width: 265px;
   position: absolute;
   bottom: 32px;
   left: 28px;
@@ -20,6 +19,8 @@
   line-height: 100%;
   color: #ffffff;
   z-index: 2;
+  transition: 0.3s all;
+  cursor: pointer;
 }
 
 @mixin cardShadowMixin {
@@ -30,9 +31,8 @@
   bottom: 0;
   z-index: 1;
   width: 100%;
-  height: 148px;
+  min-height: 148px;
   left: 0;
-  z-index: 1;
 }
 
 @mixin backgroundImageMixin {
@@ -74,4 +74,14 @@
     margin-top: 23px;
     align-self: flex-end;
   }
+}
+
+@mixin descrMixin {
+  max-width: 290px;
+  visibility: hidden;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 100%;
+  transition: 0.3s all;
+  top: 130px;
 }
