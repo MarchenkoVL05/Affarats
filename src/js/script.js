@@ -5,7 +5,39 @@ $('.carousel').slick({
   slidesToScroll: 1,
   arrows: false,
   dots: true,
-  autoplay: true,
+  autoplay: false,
+});
+
+$('.cards').slick({
+  arrows: false,
+  dots: true,
+  responsive: [
+    {
+      breakpoint: 10000,
+      settings: 'unslick',
+    },
+    {
+      breakpoint: 540,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+    },
+  ],
+});
+
+$('.catalog .cards').slick({
+  arrows: false,
+  dots: true,
+  responsive: [
+    {
+      breakpoint: 10000,
+      settings: 'unslick',
+    },
+    {
+      breakpoint: 540,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+    },
+  ],
 });
 
 // Modal Popup
@@ -13,6 +45,7 @@ $('.carousel').slick({
 const requestButton = document.querySelectorAll('.request');
 const modal = document.querySelector('.modal');
 const overlay = document.querySelector('.overlay');
+console.log(requestButton);
 
 requestButton.forEach((item) => {
   item.addEventListener('click', () => {
@@ -29,6 +62,7 @@ overlay.addEventListener('click', () => {
 // Cards details
 
 const titles = document.querySelectorAll('.card p:not(.descr)');
+console.log(titles);
 
 titles.forEach((title, key) => {
   let isOpen = false;

@@ -245,6 +245,7 @@ section:not(:first-child) {
       display: flex;
       justify-content: space-between;
       position: relative;
+      flex-wrap: wrap;
 
       &::before {
         content: '';
@@ -260,6 +261,7 @@ section:not(:first-child) {
         font-weight: 400;
         font-size: 17px;
         line-height: 135%;
+        margin-right: 20px;
       }
 
       .number {
@@ -267,6 +269,7 @@ section:not(:first-child) {
         font-weight: 800;
         font-size: 22px;
         line-height: 28px;
+        margin-right: 20px;
       }
     }
   }
@@ -295,10 +298,6 @@ section:not(:first-child) {
       background-color: $blue;
     }
   }
-}
-
-.slick-list {
-  height: 600px;
 }
 
 // Section Catalog
@@ -332,10 +331,22 @@ section:not(:first-child) {
 
   .catalog-into {
     position: relative;
+
+    .button {
+      background: $green-gradient;
+      position: absolute;
+      right: 90px;
+      bottom: 45px;
+      box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
+      position: absolute;
+      right: 90px;
+      bottom: 50px;
+      color: $green-gradient;
+    }
   }
 
   .catalog-into img {
-    max-width: 1110px;
+    max-width: 100%;
   }
 
   h3 {
@@ -344,14 +355,6 @@ section:not(:first-child) {
     position: absolute;
     top: 99px;
     right: 90px;
-  }
-
-  button {
-    background: $green-gradient;
-    position: absolute;
-    right: 90px;
-    bottom: 45px;
-    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
   }
 }
 
@@ -390,7 +393,7 @@ section:not(:first-child) {
     @include cardShadowMixin;
   }
 
-  button {
+  .show-more {
     font-weight: 800;
     font-size: 24px;
     text-align: center;
@@ -468,6 +471,10 @@ footer {
   min-height: 305px;
   padding: 58px 0 52px 0;
 
+  span {
+    margin: 0 auto;
+  }
+
   .wrapper {
     display: flex;
     justify-content: space-between;
@@ -500,15 +507,16 @@ footer {
     color: #fff;
     text-decoration: none;
     font-size: 12px;
+    display: block;
+    text-align: center;
   }
 
-  p {
+  span div {
     font-size: 12px;
-    line-height: 0px;
     text-align: center;
     color: #ffffff;
-    max-width: 850px;
     margin-top: 35px;
+    text-align: center;
 
     &:nth-child(even) {
       margin-top: 20px;
@@ -590,3 +598,10 @@ footer {
     color: $text;
   }
 }
+
+.discounts--mobile {
+  background-image: url('../../dist/images/Яркая\ жизнь\ в\ 15\ минутах\ от\ центра4\ 1.jpg');
+  @include backgroundImageMixin;
+}
+
+@import './media';

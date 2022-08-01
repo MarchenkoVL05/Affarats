@@ -1,0 +1,597 @@
+@media (max-width: 1170px) {
+  .container {
+    padding: 0 30px;
+  }
+
+  .attraction {
+    img {
+      max-height: 300px;
+    }
+  }
+
+  .features {
+    h3 {
+      color: $green;
+      text-align: center;
+    }
+  }
+
+  .flats {
+    .carousel-item {
+      height: 490px;
+      min-height: initial;
+
+      .item-image {
+        height: 489px;
+      }
+
+      .plan {
+        img {
+          max-height: 200px;
+        }
+
+        p {
+          font-size: 14px;
+        }
+
+        .plan-description p {
+          font-size: 16px;
+          margin-top: 20px;
+        }
+      }
+
+      .flat-description:before {
+        width: 500px;
+      }
+    }
+    .content-wrapper {
+      .flat-description {
+        .number {
+          font-size: 18px;
+        }
+      }
+    }
+
+    .carousel {
+      .item-content {
+        padding: 37px 18px 0 12px;
+      }
+    }
+
+    .slick-list {
+      min-height: 510px;
+    }
+  }
+
+  .catalog {
+    .catalog-into {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 1120px) {
+  .flats {
+    .container {
+      max-width: 700px;
+    }
+
+    .content-wrapper {
+      .flat-description {
+        margin: 38px 13px 70px 20px;
+      }
+    }
+
+    .carousel-item {
+      width: 690px;
+      .item-image {
+        display: none;
+      }
+    }
+  }
+
+  .form form input {
+    width: 430px;
+  }
+}
+
+@media (max-width: 1010px) {
+  footer {
+    .wrapper {
+      flex-direction: column;
+      align-items: center;
+
+      .logo {
+        width: 180px;
+      }
+
+      .social {
+        margin-top: 25px;
+      }
+
+      .logo {
+        margin-top: 26px;
+      }
+    }
+
+    span a {
+      display: block;
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .attraction {
+    .wrapper {
+      flex-direction: column;
+      align-items: start;
+    }
+
+    p {
+      max-width: initial;
+    }
+
+    img {
+      margin-top: 40px;
+    }
+  }
+}
+
+@media (max-width: 920px) {
+  section:not(:first-child) {
+    margin-top: 46px;
+  }
+
+  .form {
+    .wrapper {
+      flex-direction: column;
+    }
+
+    button {
+      align-self: start;
+    }
+
+    p {
+      max-width: initial;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .hero {
+    img {
+      width: 170px;
+    }
+
+    h1 {
+      max-width: 460px;
+      font-size: 43px;
+      margin-top: 20px;
+    }
+
+    p {
+      font-size: 19px;
+      margin-top: 25px;
+    }
+
+    button {
+      width: 255px;
+      font-size: 17px;
+    }
+
+    .circle {
+      width: 630px;
+      height: 630px;
+
+      &::before {
+        content: '';
+        width: 176px;
+        height: 176px;
+        background: $green-gradient;
+        position: absolute;
+        border-radius: 100%;
+        top: -48px;
+        right: -110px;
+      }
+
+      &::after {
+        content: '';
+        width: 82px;
+        height: 82px;
+        background: $blue-gradient;
+        position: absolute;
+        border-radius: 100%;
+        right: -95px;
+        top: 220px;
+      }
+    }
+  }
+  .attraction {
+    p {
+      margin-top: 10px;
+      font-size: 19px;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .flats {
+    .container {
+      max-width: 500px;
+    }
+    .carousel {
+      .item-content {
+        text-align: center;
+        .plan-description {
+          margin-left: 0;
+        }
+      }
+    }
+
+    .carousel-item {
+      .flat-description:before {
+        width: 320px;
+      }
+    }
+
+    .plan-wrapper {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .slick-track {
+      .carousel-item {
+        height: 680px;
+      }
+    }
+
+    .carousel-item {
+      .flat-description:before {
+        width: 320px;
+      }
+    }
+  }
+
+  .modal {
+    max-width: 500px;
+
+    input {
+      width: 350px;
+    }
+
+    .title {
+      font-size: 30px;
+    }
+
+    p,
+    a {
+      font-size: 12px;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .hero {
+    .circle {
+      &::before {
+        content: '';
+        width: 176px;
+        height: 176px;
+        background: $green-gradient;
+        position: absolute;
+        border-radius: 100%;
+        top: 415px;
+        right: 10px;
+      }
+
+      &::after {
+        content: '';
+        width: 82px;
+        height: 82px;
+        background: $blue-gradient;
+        position: absolute;
+        border-radius: 100%;
+        right: 160px;
+        top: -70px;
+      }
+    }
+  }
+}
+
+@media (max-width: 540px) {
+  .container {
+    max-width: 375px;
+  }
+
+  .hero {
+    img {
+      width: 110px;
+    }
+
+    h1 {
+      font-size: 24px;
+      line-height: 30px;
+    }
+
+    p {
+      font-size: 12px;
+      line-height: 10px;
+      margin-top: 5px;
+      max-width: 200px;
+    }
+
+    button {
+      width: 164px;
+      height: 30px;
+      font-size: 12px;
+      margin-top: 16px;
+      padding: 0;
+    }
+
+    .circle {
+      width: 336px;
+      height: 336px;
+      left: -65px;
+      padding: 45px 20px 40px 70px;
+      &::before {
+        content: '';
+        width: 156px;
+        height: 156px;
+        background: $green-gradient;
+        position: absolute;
+        border-radius: 100%;
+        right: -45px;
+        top: 245px;
+      }
+
+      &::after {
+        content: '';
+        width: 82px;
+        height: 82px;
+        background: $blue-gradient;
+        position: absolute;
+        border-radius: 100%;
+        right: 70px;
+        top: -95px;
+      }
+    }
+  }
+
+  .attraction {
+    h3 {
+      font-size: 24px;
+      line-height: 30px;
+    }
+
+    p {
+      margin-top: 10px;
+      font-size: 12px;
+    }
+
+    img {
+      max-height: 190px;
+    }
+  }
+
+  .features {
+    h3 {
+      font-size: 24px;
+    }
+
+    .cards {
+      margin-top: 30px;
+
+      img {
+        width: 300px;
+        min-height: 300px;
+      }
+
+      .cardShadow {
+        width: 95%;
+      }
+
+      p {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .catalog {
+    img {
+      width: 300px;
+      min-height: 300px;
+    }
+
+    .cardShadow {
+      width: 95%;
+    }
+
+    p {
+      font-size: 18px;
+    }
+  }
+
+  .flats {
+    .container {
+      max-width: 375px;
+    }
+    .carousel {
+      .item-content {
+        .plan-description {
+          text-align: center;
+          margin-left: 0;
+
+          h6 {
+            font-size: 16px;
+            margin-top: 32px;
+          }
+
+          p {
+            font-size: 12px;
+            margin-top: 10px;
+          }
+
+          button {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+
+    .carousel-item {
+      .plan {
+        img {
+          width: 170px;
+        }
+
+        p {
+          display: none;
+        }
+      }
+    }
+
+    .slick-track {
+      .carousel-item {
+        height: 626px;
+      }
+    }
+
+    .carousel-item {
+      .flat-description:before {
+        width: 190px;
+      }
+    }
+
+    h3 {
+      font-size: 24px;
+      text-align: center;
+    }
+  }
+
+  .catalog {
+    .catalog-into {
+      display: block;
+      margin-top: 50px;
+
+      img {
+        width: 316px;
+        min-height: 613px;
+        object-fit: cover;
+        border-radius: 20px;
+      }
+
+      h3 {
+        top: 57px;
+        right: 37px;
+        text-align: center;
+      }
+
+      .button {
+        right: 34px;
+        bottom: 27px;
+      }
+    }
+  }
+
+  .details {
+    h2 {
+      font-size: 27px;
+      text-align: center;
+      line-height: 35px;
+    }
+
+    img {
+      width: 310px;
+      height: 375px;
+    }
+  }
+
+  .discounts {
+    background-image: url('../../dist/images/Яркая\ жизнь\ в\ 15\ минутах\ от\ центра4\ 1.jpg');
+    background-position: 75%;
+    h3 {
+      font-size: 24px;
+      line-height: 30px;
+    }
+
+    p {
+      font-size: 18px;
+      margin-top: 20px;
+      max-width: 253px;
+    }
+  }
+
+  .form {
+    background: url('../../dist/images/Group\ 93.jpg');
+    @include backgroundImageMixin;
+    form {
+      order: -1;
+      margin-top: 221px;
+
+      input {
+        width: 294px;
+      }
+    }
+
+    h3 {
+      font-size: 24px;
+      line-height: 30px;
+      margin-top: 41px;
+    }
+
+    p {
+      font-size: 18px;
+      margin-top: 16px;
+    }
+  }
+
+  .details {
+    .descr {
+      top: 225px;
+    }
+  }
+
+  .catalog {
+    .descr {
+      top: 145px;
+    }
+  }
+
+  .features {
+    .card {
+      .descr {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .modal {
+    max-width: 350px;
+    padding: 81px 33px 58px;
+
+    input {
+      width: 276px;
+    }
+
+    .title {
+      font-size: 30px;
+    }
+
+    p,
+    a {
+      font-size: 12px;
+    }
+
+    p {
+      margin-left: 10px;
+    }
+
+    h3 {
+      font-size: 30px;
+      line-height: 35px;
+    }
+  }
+}
